@@ -1,0 +1,2569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation & Entrepreneurship Cell — THDC IHET</title>
+    <meta name="description" content="Official website of the Innovation & Entrepreneurship Cell at THDC Institute of Hydropower Engineering and Technology, Tehri. Discover events, startups, and innovation programs.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Innovation & Entrepreneurship Cell — THDC IHET">
+    <meta property="og:description" content="Empowering students to innovate, build startups, and transform ideas into impact.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=630&fit=crop">
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* ========== CSS VARIABLES ========== */
+        :root {
+            --navy: #0B1220;
+            --dark-bg: #101827;
+            --electric: #2563EB;
+            --cyan: #22D3EE;
+            --white: #FFFFFF;
+            --light-bg: #F8FAFC;
+            --muted: #64748B;
+            --surface: #FFFFFF;
+            --border: #E2E8F0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --shadow-lg: 0 20px 50px rgba(0,0,0,0.12);
+            --radius: 12px;
+            --radius-sm: 8px;
+            --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --font-head: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--navy);
+            background: var(--light-bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        button { cursor: pointer; font-family: inherit; border: none; background: none; }
+        ul { list-style: none; }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding { padding: 96px 0; }
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--electric);
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-family: var(--font-head);
+            font-size: clamp(1.75rem, 4vw, 2.75rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--muted);
+            max-width: 640px;
+            margin-bottom: 40px;
+        }
+
+        /* ========== BUTTONS ========== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 32px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .btn-primary {
+            background: var(--electric);
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+        }
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 1.5px solid rgba(255,255,255,0.35);
+        }
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.6);
+            transform: translateY(-2px);
+        }
+        .btn-dark-outline {
+            background: transparent;
+            color: var(--navy);
+            border: 1.5px solid var(--border);
+        }
+        .btn-dark-outline:hover {
+            border-color: var(--electric);
+            color: var(--electric);
+            transform: translateY(-2px);
+        }
+        .btn-cyan {
+            background: var(--cyan);
+            color: var(--navy);
+            font-weight: 700;
+        }
+        .btn-cyan:hover {
+            background: #06b6d4;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(34, 211, 238, 0.35);
+        }
+
+        /* ========== NAVBAR ========== */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 18px 0;
+            transition: var(--transition);
+            background: transparent;
+        }
+        .navbar.scrolled {
+            background: rgba(11, 18, 32, 0.95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 12px 0;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+        .nav-logo {
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--electric), var(--cyan));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-head);
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--white);
+            letter-spacing: 0.02em;
+        }
+        .nav-brand-text { line-height: 1.2; }
+        .nav-brand-text strong {
+            display: block;
+            font-family: var(--font-head);
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+        .nav-brand-text span {
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .nav-links a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.75);
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--white);
+            background: rgba(255,255,255,0.08);
+        }
+        .nav-cta {
+            flex-shrink: 0;
+        }
+        .nav-cta .btn { padding: 10px 24px; font-size: 0.85rem; }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 8px;
+            z-index: 1001;
+        }
+        .hamburger span {
+            display: block;
+            width: 24px; height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: var(--transition);
+            transform-origin: center;
+        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* Mobile nav */
+        @media (max-width: 900px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                position: fixed;
+                top: 0; right: -100%;
+                width: 300px; height: 100vh;
+                background: var(--navy);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 100px 32px 32px;
+                gap: 4px;
+                transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                box-shadow: -10px 0 40px rgba(0,0,0,0.3);
+            }
+            .nav-links.open { right: 0; }
+            .nav-links a {
+                width: 100%;
+                padding: 14px 16px;
+                font-size: 1rem;
+                border-radius: 8px;
+            }
+            .nav-cta { display: none; }
+            .nav-links .mobile-cta {
+                display: block;
+                width: 100%;
+                margin-top: 16px;
+            }
+            .nav-links .mobile-cta .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        .mobile-cta { display: none; }
+
+        /* ========== HERO ========== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--navy);
+            overflow: hidden;
+            padding: 120px 0 80px;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .hero-bg img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.28;
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(11,18,32,0.92) 0%, rgba(11,18,32,0.65) 60%, rgba(11,18,32,0.85) 100%);
+        }
+        /* Decorative geometric elements */
+        .hero-geo {
+            position: absolute;
+            border: 1px solid rgba(34, 211, 238, 0.12);
+            border-radius: 50%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .hero-geo-1 { width: 500px; height: 500px; top: -150px; right: -100px; }
+        .hero-geo-2 { width: 300px; height: 300px; bottom: -80px; left: 5%; border-color: rgba(37,99,235,0.15); }
+        .hero-grid-lines {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 80px 80px;
+            pointer-events: none;
+        }
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero-content { max-width: 600px; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(34, 211, 238, 0.1);
+            border: 1px solid rgba(34, 211, 238, 0.25);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--cyan);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        .hero-badge::before {
+            content: '';
+            width: 6px; height: 6px;
+            background: var(--cyan);
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.7); }
+        }
+        .hero h1 {
+            font-family: var(--font-head);
+            font-size: clamp(2.5rem, 5.5vw, 4rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+        .hero h1 .highlight {
+            background: linear-gradient(90deg, var(--cyan), var(--electric));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 520px;
+        }
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-visual-img {
+            position: relative;
+            width: 100%;
+            max-width: 480px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+        }
+        .hero-visual-img img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+        }
+        .hero-visual-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius);
+            pointer-events: none;
+        }
+        .hero-float-card {
+            position: absolute;
+            background: rgba(16, 24, 39, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius-sm);
+            padding: 14px 20px;
+            color: var(--white);
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            z-index: 3;
+        }
+        .hero-float-card i { color: var(--cyan); font-size: 1.1rem; }
+        .hero-float-1 { bottom: 30px; left: -20px; }
+        .hero-float-2 { top: 30px; right: -20px; }
+        .hero-float-card strong { display: block; font-size: 1rem; }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+        .scroll-indicator .mouse {
+            width: 22px; height: 34px;
+            border: 1.5px solid rgba(255,255,255,0.3);
+            border-radius: 12px;
+            position: relative;
+        }
+        .scroll-indicator .mouse::after {
+            content: '';
+            position: absolute;
+            top: 6px; left: 50%;
+            transform: translateX(-50%);
+            width: 3px; height: 8px;
+            background: var(--cyan);
+            border-radius: 2px;
+            animation: scroll-anim 2s infinite;
+        }
+        @keyframes scroll-anim {
+            0% { opacity: 1; top: 6px; }
+            100% { opacity: 0; top: 18px; }
+        }
+
+        /* Hero entrance animations */
+        .hero-anim {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+        .hero-anim-1 { animation-delay: 0.15s; }
+        .hero-anim-2 { animation-delay: 0.3s; }
+        .hero-anim-3 { animation-delay: 0.45s; }
+        .hero-anim-4 { animation-delay: 0.6s; }
+        .hero-anim-5 { animation-delay: 0.75s; }
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+            .hero-content { max-width: 100%; }
+            .hero-visual { display: none; }
+            .hero { min-height: auto; padding: 140px 0 100px; }
+            .hero-float-card { display: none; }
+            .scroll-indicator { display: none; }
+        }
+
+        /* ========== SCROLL REVEAL ========== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        /* ========== ABOUT ========== */
+        .about-section { background: var(--white); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .about-img {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        .about-img img {
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+        }
+        .about-img::before {
+            content: '';
+            position: absolute;
+            top: 20px; left: 20px;
+            width: 80px; height: 80px;
+            border-top: 3px solid var(--cyan);
+            border-left: 3px solid var(--cyan);
+            border-radius: 4px 0 0 0;
+            z-index: 2;
+            opacity: 0.6;
+        }
+        .about-text h2 { margin-bottom: 20px; }
+        .about-text p {
+            color: var(--muted);
+            margin-bottom: 24px;
+            font-size: 1.02rem;
+        }
+        .about-pillars {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .pillar-card {
+            padding: 20px;
+            background: var(--light-bg);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--electric);
+        }
+        .pillar-card h4 {
+            font-family: var(--font-head);
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+        .pillar-card p {
+            font-size: 0.82rem;
+            color: var(--muted);
+            margin: 0;
+        }
+        @media (max-width: 900px) {
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .about-img img { height: 320px; }
+        }
+
+        /* ========== ECOSYSTEM CARDS ========== */
+        .ecosystem-section { background: var(--light-bg); }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .eco-card {
+            background: var(--surface);
+            border-radius: var(--radius);
+            padding: 36px 28px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .eco-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--electric), var(--cyan));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .eco-card:hover::before { transform: scaleX(1); }
+        .eco-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        .eco-icon {
+            width: 52px; height: 52px;
+            background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(34,211,238,0.08));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--electric);
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+        .eco-card:hover .eco-icon {
+            background: linear-gradient(135deg, var(--electric), var(--cyan));
+            color: var(--white);
+            transform: scale(1.05);
+        }
+        .eco-card h3 {
+            font-family: var(--font-head);
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+        }
+        .eco-card p {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        @media (max-width: 900px) { .cards-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .cards-grid { grid-template-columns: 1fr; } }
+
+        /* ========== EVENTS ========== */
+        .events-section { background: var(--white); }
+        .filter-bar {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 36px;
+        }
+        .filter-btn {
+            padding: 8px 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border-radius: 100px;
+            border: 1.5px solid var(--border);
+            color: var(--muted);
+            transition: var(--transition);
+            background: var(--white);
+        }
+        .filter-btn:hover { border-color: var(--electric); color: var(--electric); }
+        .filter-btn.active {
+            background: var(--electric);
+            color: var(--white);
+            border-color: var(--electric);
+        }
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+        .event-card {
+            background: var(--surface);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        .event-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        .event-img {
+            position: relative;
+            overflow: hidden;
+            height: 220px;
+        }
+        .event-img img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .event-card:hover .event-img img { transform: scale(1.06); }
+        .event-status {
+            position: absolute;
+            top: 14px; right: 14px;
+            padding: 5px 14px;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            z-index: 2;
+        }
+        .status-upcoming { background: var(--cyan); color: var(--navy); }
+        .status-ongoing { background: #F59E0B; color: var(--navy); }
+        .status-completed { background: rgba(255,255,255,0.9); color: var(--muted); }
+        .event-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .event-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.75rem;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+        .event-meta i { color: var(--electric); margin-right: 4px; }
+        .event-body h3 {
+            font-family: var(--font-head);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .event-body p {
+            font-size: 0.86rem;
+            color: var(--muted);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        .event-cat {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 4px;
+            background: rgba(37,99,235,0.08);
+            color: var(--electric);
+            margin-bottom: 12px;
+        }
+        .view-all-wrap { text-align: center; margin-top: 40px; }
+
+        @media (max-width: 768px) { .event-grid { grid-template-columns: 1fr; } }
+
+        /* ========== NEWS ========== */
+        .news-section { background: var(--light-bg); }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .news-card {
+            background: var(--surface);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+        }
+        .news-img {
+            overflow: hidden;
+            height: 190px;
+        }
+        .news-img img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .news-card:hover .news-img img { transform: scale(1.05); }
+        .news-body {
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.72rem;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+        .news-cat {
+            font-weight: 600;
+            color: var(--electric);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .news-body h3 {
+            font-family: var(--font-head);
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+        .news-body p {
+            font-size: 0.84rem;
+            color: var(--muted);
+            margin-bottom: 18px;
+            flex: 1;
+        }
+        .read-more {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--electric);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+            align-self: flex-start;
+        }
+        .read-more:hover { gap: 10px; color: #1d4ed8; }
+        @media (max-width: 900px) { .news-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .news-grid { grid-template-columns: 1fr; } }
+
+        /* ========== STARTUP SPOTLIGHT ========== */
+        .spotlight-section {
+            background: var(--navy);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .spotlight-section::before {
+            content: '';
+            position: absolute;
+            width: 600px; height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(37,99,235,0.12), transparent 70%);
+            top: -200px; right: -200px;
+            pointer-events: none;
+        }
+        .spotlight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .spotlight-text .section-label { color: var(--cyan); }
+        .spotlight-text .section-title { color: var(--white); }
+        .spotlight-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 4px;
+            background: rgba(34,211,238,0.12);
+            color: var(--cyan);
+            margin-bottom: 16px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .spotlight-text p {
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 24px;
+            font-size: 1rem;
+        }
+        .spotlight-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+        .highlight-chip {
+            padding: 6px 14px;
+            border-radius: 100px;
+            border: 1px solid rgba(255,255,255,0.15);
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.8);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .highlight-chip i { color: var(--cyan); font-size: 0.7rem; }
+        .spotlight-img {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+            position: relative;
+        }
+        .spotlight-img img { width: 100%; height: 440px; object-fit: cover; }
+        .spotlight-img::after {
+            content: 'SAMPLE PROJECT';
+            position: absolute;
+            bottom: 16px; left: 16px;
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
+            color: rgba(255,255,255,0.5);
+            background: rgba(0,0,0,0.5);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+        @media (max-width: 900px) {
+            .spotlight-grid { grid-template-columns: 1fr; gap: 40px; }
+            .spotlight-img img { height: 300px; }
+        }
+
+        /* ========== STATS ========== */
+        .stats-section {
+            background: var(--white);
+            padding: 80px 0;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 36px 20px;
+            border-radius: var(--radius);
+            background: var(--light-bg);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        .stat-card:hover {
+            border-color: var(--electric);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+        .stat-number {
+            font-family: var(--font-head);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-number .suffix { color: var(--electric); }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--muted);
+            font-weight: 500;
+        }
+        @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        /* ========== JOIN CTA ========== */
+        .join-section {
+            background: linear-gradient(135deg, var(--navy) 0%, #162044 50%, #0f1a36 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            padding: 110px 0;
+        }
+        .join-section::before {
+            content: '';
+            position: absolute;
+            width: 400px; height: 400px;
+            border: 1px solid rgba(34,211,238,0.1);
+            border-radius: 50%;
+            top: -150px; left: -100px;
+            pointer-events: none;
+        }
+        .join-section::after {
+            content: '';
+            position: absolute;
+            width: 300px; height: 300px;
+            border: 1px solid rgba(37,99,235,0.15);
+            border-radius: 50%;
+            bottom: -100px; right: -80px;
+            pointer-events: none;
+        }
+        .join-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .join-inner .section-title { color: var(--white); font-size: clamp(1.9rem, 4vw, 2.8rem); }
+        .join-inner p {
+            color: rgba(255,255,255,0.65);
+            font-size: 1.08rem;
+            margin-bottom: 36px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .join-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ========== TEAM ========== */
+        .team-section { background: var(--light-bg); }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+        .team-card {
+            background: var(--surface);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            text-align: center;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+        }
+        .team-img {
+            height: 220px;
+            overflow: hidden;
+            background: var(--light-bg);
+        }
+        .team-img img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .team-card:hover .team-img img { transform: scale(1.04); }
+        .team-body { padding: 20px 16px; }
+        .team-body h4 {
+            font-family: var(--font-head);
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .team-role {
+            font-size: 0.75rem;
+            color: var(--electric);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 8px;
+        }
+        .team-bio {
+            font-size: 0.78rem;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        .team-social {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            background: var(--light-bg);
+            color: var(--muted);
+            transition: var(--transition);
+            font-size: 0.85rem;
+        }
+        .team-social:hover { background: var(--electric); color: var(--white); }
+        @media (max-width: 900px) { .team-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 600px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        /* ========== GALLERY ========== */
+        .gallery-section { background: var(--white); }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 1;
+        }
+        .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+        .gallery-item img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .gallery-item:hover img { transform: scale(1.08); }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(11,18,32,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-overlay i {
+            color: var(--white);
+            font-size: 1.5rem;
+            transform: scale(0.8);
+            transition: var(--transition);
+        }
+        .gallery-item:hover .gallery-overlay i { transform: scale(1); }
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(11,18,32,0.95);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        .lightbox.active { opacity: 1; pointer-events: all; }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: var(--radius-sm);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            transform: scale(0.92);
+            transition: transform 0.3s;
+        }
+        .lightbox.active img { transform: scale(1); }
+        .lightbox-close {
+            position: absolute;
+            top: 24px; right: 24px;
+            width: 44px; height: 44px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .lightbox-close:hover { background: rgba(255,255,255,0.2); }
+
+        /* ========== CONTACT ========== */
+        .contact-section { background: var(--navy); color: var(--white); }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+        }
+        .contact-info .section-label { color: var(--cyan); }
+        .contact-info .section-title { color: var(--white); }
+        .contact-info p { color: rgba(255,255,255,0.6); margin-bottom: 32px; }
+        .contact-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+        .contact-item-icon {
+            width: 44px; height: 44px;
+            border-radius: 10px;
+            background: rgba(34,211,238,0.1);
+            border: 1px solid rgba(34,211,238,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cyan);
+            flex-shrink: 0;
+            font-size: 0.95rem;
+        }
+        .contact-item h4 {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 4px;
+        }
+        .contact-item p {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.92rem;
+            margin: 0;
+        }
+        .contact-socials {
+            display: flex;
+            gap: 10px;
+            margin-top: 32px;
+        }
+        .contact-socials a {
+            width: 40px; height: 40px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.6);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+        .contact-socials a:hover {
+            background: var(--electric);
+            border-color: var(--electric);
+            color: var(--white);
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .form-group label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 0.03em;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.05);
+            color: var(--white);
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--cyan);
+            background: rgba(255,255,255,0.08);
+            box-shadow: 0 0 0 3px rgba(34,211,238,0.1);
+        }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-group select option { background: var(--navy); }
+        @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+        /* ========== MODAL ========== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(11,18,32,0.7);
+            backdrop-filter: blur(6px);
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            padding: 24px;
+        }
+        .modal-overlay.active { opacity: 1; pointer-events: all; }
+        .modal {
+            background: var(--white);
+            border-radius: var(--radius);
+            width: 100%;
+            max-width: 560px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 40px;
+            position: relative;
+            transform: translateY(20px) scale(0.97);
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .modal-overlay.active .modal { transform: translateY(0) scale(1); }
+        .modal-close {
+            position: absolute;
+            top: 16px; right: 16px;
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-size: 1rem;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .modal-close:hover { background: #e2e8f0; color: var(--navy); }
+        .modal h2 {
+            font-family: var(--font-head);
+            font-size: 1.6rem;
+            margin-bottom: 6px;
+        }
+        .modal > p {
+            font-size: 0.88rem;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+        .join-form { display: flex; flex-direction: column; gap: 16px; }
+        .join-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .join-form .form-group label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        .join-form .form-group input,
+        .join-form .form-group textarea,
+        .join-form .form-group select {
+            border: 1.5px solid var(--border);
+            background: var(--white);
+            color: var(--navy);
+        }
+        .join-form .form-group input:focus,
+        .join-form .form-group textarea:focus,
+        .join-form .form-group select:focus {
+            border-color: var(--electric);
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+            background: var(--white);
+        }
+        .join-form .form-group textarea { min-height: 80px; }
+        .error-text {
+            font-size: 0.7rem;
+            color: #EF4444;
+            display: none;
+            margin-top: 2px;
+        }
+        .form-group.has-error input,
+        .form-group.has-error textarea,
+        .form-group.has-error select {
+            border-color: #EF4444 !important;
+        }
+        .form-group.has-error .error-text { display: block; }
+        .success-msg {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .success-msg i {
+            font-size: 3rem;
+            color: #10B981;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .success-msg h3 {
+            font-family: var(--font-head);
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+        .success-msg p { color: var(--muted); font-size: 0.9rem; }
+        @media (max-width: 600px) {
+            .modal { padding: 28px 20px; }
+            .join-form .form-row { grid-template-columns: 1fr; }
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--dark-bg);
+            color: rgba(255,255,255,0.6);
+            padding: 64px 0 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 48px;
+            padding-bottom: 48px;
+        }
+        .footer-brand .nav-logo { margin-bottom: 16px; }
+        .footer-brand p {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            max-width: 300px;
+        }
+        .footer h4 {
+            font-family: var(--font-head);
+            font-size: 0.85rem;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+        }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a {
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+        .footer-links a:hover { color: var(--cyan); }
+        .footer-socials {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+        }
+        .footer-socials a {
+            width: 36px; height: 36px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+        .footer-socials a:hover {
+            background: var(--electric);
+            border-color: var(--electric);
+            color: var(--white);
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .footer-bottom p { font-size: 0.78rem; }
+        .back-to-top {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            color: rgba(255,255,255,0.5);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .back-to-top:hover { color: var(--cyan); }
+        .back-to-top i {
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            transition: var(--transition);
+        }
+        .back-to-top:hover i {
+            border-color: var(--cyan);
+            background: rgba(34,211,238,0.1);
+        }
+        @media (max-width: 900px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+        @media (max-width: 500px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+
+        /* ========== REDUCED MOTION ========== */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .reveal { opacity: 1; transform: none; }
+            .hero-anim { opacity: 1; transform: none; }
+        }
+
+        /* ========== UTILITY ========== */
+        .text-center { text-align: center; }
+        .mt-40 { margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#home" class="nav-brand">
+                <div class="nav-logo">IEC</div>
+                <div class="nav-brand-text">
+                    <strong>Innovation Cell</strong>
+                    <span>THDC IHET, Tehri</span>
+                </div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#initiatives">Initiatives</a>
+                <a href="#events">Events</a>
+                <a href="#news">News</a>
+                <a href="#team">Our Team</a>
+                <a href="#contact">Contact</a>
+                <div class="mobile-cta">
+                    <button class="btn btn-primary" onclick="openJoinModal()">Join IEC</button>
+                </div>
+            </div>
+            <div class="nav-cta">
+                <button class="btn btn-primary" onclick="openJoinModal()">Join IEC</button>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <!-- Placeholder image: Replace with official institutional photo -->
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&h=900&fit=crop" alt="Students collaborating in an innovation lab" loading="eager">
+        </div>
+        <div class="hero-grid-lines"></div>
+        <div class="hero-geo hero-geo-1"></div>
+        <div class="hero-geo hero-geo-2"></div>
+
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge hero-anim hero-anim-1">THDC IHET · Tehri, Uttarakhand</div>
+                <h1 class="hero-anim hero-anim-2">
+                    Where Ideas<br>Become <span class="highlight">Innovation</span>
+                </h1>
+                <p class="hero-anim hero-anim-3">
+                    Empowering students to innovate, build startups, explore entrepreneurship, and transform ideas into meaningful impact.
+                </p>
+                <div class="hero-btns hero-anim hero-anim-4">
+                    <a href="#initiatives" class="btn btn-primary">
+                        Explore Our Initiatives <i class="fas fa-arrow-right" style="font-size:0.8rem;"></i>
+                    </a>
+                    <button class="btn btn-outline" onclick="openJoinModal()">
+                        Join Innovation Cell
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual hero-anim hero-anim-5">
+                <div class="hero-visual-img">
+                    <!-- Placeholder image: Replace with official institutional photo -->
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=800&fit=crop" alt="Students brainstorming at a startup workshop" loading="eager">
+                </div>
+                <div class="hero-float-card hero-float-1">
+                    <i class="fas fa-lightbulb"></i>
+                    <div><strong>25+</strong> Student Innovators</div>
+                </div>
+                <div class="hero-float-card hero-float-2">
+                    <i class="fas fa-rocket"></i>
+                    <div><strong>5+</strong> Startup Ideas</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="about-section section-padding" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img reveal">
+                    <!-- Placeholder image: Replace with official institutional photo -->
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=900&fit=crop" alt="Innovation lab brainstorming session" loading="lazy">
+                </div>
+                <div class="about-text reveal reveal-delay-1">
+                    <span class="section-label">About IEC</span>
+                    <h2 class="section-title">Building a Culture of Innovation</h2>
+                    <p>
+                        IEC encourages students to think beyond conventional boundaries, develop entrepreneurial skills, explore innovative technologies, and transform their ideas into real-world solutions.
+                    </p>
+                    <p>
+                        As the official Innovation & Entrepreneurship Cell of THDC Institute of Hydropower Engineering and Technology, Tehri, we serve as a bridge between academic learning and real-world entrepreneurial impact.
+                    </p>
+                    <div class="about-pillars">
+                        <div class="pillar-card">
+                            <h4><i class="fas fa-bullseye" style="color:var(--electric);margin-right:6px;"></i>Mission</h4>
+                            <p>Foster a culture of innovation and entrepreneurship among students through mentorship, resources, and hands-on experience.</p>
+                        </div>
+                        <div class="pillar-card">
+                            <h4><i class="fas fa-eye" style="color:var(--cyan);margin-right:6px;"></i>Vision</h4>
+                            <p>To become a leading hub of student-driven innovation and startup creation in Uttarakhand and beyond.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INITIATIVES / ECOSYSTEM ==================== -->
+    <section class="ecosystem-section section-padding" id="initiatives">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label">What We Do</span>
+                <h2 class="section-title">Our Innovation Ecosystem</h2>
+                <p class="section-subtitle">Six pillars that support student innovators, budding entrepreneurs, and future changemakers at every stage of their journey.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="eco-card reveal">
+                    <div class="eco-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Entrepreneurship Development</h3>
+                    <p>Workshops, bootcamps, and resources to build entrepreneurial mindset and business fundamentals.</p>
+                </div>
+                <div class="eco-card reveal reveal-delay-1">
+                    <div class="eco-icon"><i class="fas fa-seedling"></i></div>
+                    <h3>Startup Incubation</h3>
+                    <p>Support for early-stage startups with mentorship, workspace, and access to funding opportunities.</p>
+                </div>
+                <div class="eco-card reveal reveal-delay-2">
+                    <div class="eco-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Innovation & Ideation</h3>
+                    <p>Ideation sessions, design thinking workshops, and creative problem-solving sprints for real challenges.</p>
+                </div>
+                <div class="eco-card reveal">
+                    <div class="eco-icon"><i class="fas fa-code"></i></div>
+                    <h3>Hackathons & Competitions</h3>
+                    <p>Regular hackathons, innovation challenges, and competitions to test and refine student ideas.</p>
+                </div>
+                <div class="eco-card reveal reveal-delay-1">
+                    <div class="eco-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Industry Collaboration</h3>
+                    <p>Partnerships with industry leaders, startups, and experts to bridge academic and industry gaps.</p>
+                </div>
+                <div class="eco-card reveal reveal-delay-2">
+                    <div class="eco-icon"><i class="fas fa-users"></i></div>
+                    <h3>Mentorship & Networking</h3>
+                    <p>Connect with experienced mentors, alumni entrepreneurs, and a community of like-minded innovators.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EVENTS ==================== -->
+    <section class="events-section section-padding" id="events">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label">Events</span>
+                <h2 class="section-title">What's Happening at IEC</h2>
+                <p class="section-subtitle">Explore our upcoming, ongoing, and past events designed to inspire and empower student innovators.</p>
+            </div>
+            <div class="filter-bar reveal" id="eventFilters">
+                <button class="filter-btn active" data-filter="all">All Events</button>
+                <button class="filter-btn" data-filter="Upcoming">Upcoming</button>
+                <button class="filter-btn" data-filter="Ongoing">Ongoing</button>
+                <button class="filter-btn" data-filter="Completed">Completed</button>
+            </div>
+            <div class="event-grid" id="eventGrid">
+                <!-- Rendered by JS -->
+            </div>
+            <div class="view-all-wrap reveal">
+                <button class="btn btn-dark-outline" onclick="alert('Event archive page coming soon.')">View All Events <i class="fas fa-arrow-right" style="font-size:0.8rem;"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWS ==================== -->
+    <section class="news-section section-padding" id="news">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label">News & Announcements</span>
+                <h2 class="section-title">Latest News & Updates</h2>
+                <p class="section-subtitle">Stay informed with the latest announcements, achievements, and stories from the IEC community.</p>
+            </div>
+            <div class="filter-bar reveal" id="newsFilters">
+                <button class="filter-btn active" data-filter="all">All News</button>
+                <button class="filter-btn" data-filter="Announcement">Announcements</button>
+                <button class="filter-btn" data-filter="Achievement">Achievements</button>
+                <button class="filter-btn" data-filter="Competition">Competitions</button>
+                <button class="filter-btn" data-filter="Story">Student Stories</button>
+            </div>
+            <div class="news-grid" id="newsGrid">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== STARTUP SPOTLIGHT ==================== -->
+    <section class="spotlight-section section-padding" id="spotlight">
+        <div class="container">
+            <div class="spotlight-grid">
+                <div class="spotlight-text reveal">
+                    <span class="section-label">Innovation in Action</span>
+                    <h2 class="section-title">Startup Spotlight</h2>
+                    <div class="spotlight-tag">Sample Project — HydroSense</div>
+                    <p>
+                        HydroSense is a student-led innovation project developing low-cost IoT sensors for real-time water quality monitoring in hydropower-adjacent communities. The project aims to provide actionable data for environmental conservation and sustainable water management.
+                    </p>
+                    <div class="spotlight-highlights">
+                        <span class="highlight-chip"><i class="fas fa-check-circle"></i> IoT-based solution</span>
+                        <span class="highlight-chip"><i class="fas fa-check-circle"></i> Low-cost hardware</span>
+                        <span class="highlight-chip"><i class="fas fa-check-circle"></i> Real-time monitoring</span>
+                        <span class="highlight-chip"><i class="fas fa-check-circle"></i> Community impact</span>
+                    </div>
+                    <button class="btn btn-cyan" onclick="alert('Project detail page coming soon. This is a sample showcase.')">
+                        Explore Project <i class="fas fa-arrow-right" style="font-size:0.8rem;"></i>
+                    </button>
+                </div>
+                <div class="spotlight-img reveal reveal-delay-1">
+                    <!-- Placeholder image: Replace with actual project photo -->
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=800&fit=crop" alt="Student working on IoT water quality sensor project" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== STATISTICS ==================== -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid" id="statsGrid">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== JOIN CTA ==================== -->
+    <section class="join-section" id="join">
+        <div class="container join-inner reveal">
+            <h2 class="section-title">Have an Idea? Let's Build It Together.</h2>
+            <p>Join the Innovation & Entrepreneurship Cell and become part of a community that believes in creativity, innovation, and entrepreneurship.</p>
+            <div class="join-btns">
+                <button class="btn btn-cyan" onclick="openJoinModal()">Join IEC <i class="fas fa-arrow-right" style="font-size:0.8rem;"></i></button>
+                <a href="#contact" class="btn btn-outline">Contact IEC</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TEAM ==================== -->
+    <section class="team-section section-padding" id="team">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label">Our Team</span>
+                <h2 class="section-title">Meet the People Behind IEC</h2>
+                <p class="section-subtitle">A dedicated team of faculty coordinators and student leaders driving innovation at THDC IHET. <em style="font-size:0.8rem;color:var(--muted);">(Sample profiles — replace with official team data)</em></p>
+            </div>
+            <div class="team-grid" id="teamGrid">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY ==================== -->
+    <section class="gallery-section section-padding" id="gallery">
+        <div class="container">
+            <div class="reveal">
+                <span class="section-label">Gallery</span>
+                <h2 class="section-title">Moments of Innovation</h2>
+                <p class="section-subtitle">A glimpse into our workshops, hackathons, student activities, and startup discussions.</p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="contact-section section-padding" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <span class="section-label">Get in Touch</span>
+                    <h2 class="section-title">Contact IEC</h2>
+                    <p>Have questions, ideas, or want to collaborate? Reach out to us.</p>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-university"></i></div>
+                        <div>
+                            <h4>Institution</h4>
+                            <p>THDC Institute of Hydropower Engineering and Technology (THDC IHET), Tehri, Uttarakhand, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email (Placeholder)</h4>
+                            <p>iec@thdcihet.ac.in <span style="font-size:0.7rem;color:rgba(255,255,255,0.4);">(placeholder — replace with official email)</span></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Tehri Garhwal, Uttarakhand — 249001, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="#" aria-label="LinkedIn" onclick="event.preventDefault();alert('Official LinkedIn page coming soon.')"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram" onclick="event.preventDefault();alert('Official Instagram page coming soon.')"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter" onclick="event.preventDefault();alert('Official Twitter page coming soon.')"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube" onclick="event.preventDefault();alert('Official YouTube channel coming soon.')"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form reveal reveal-delay-1">
+                    <form onsubmit="handleContactForm(event)">
+                        <div class="form-group">
+                            <label for="contactName">Full Name</label>
+                            <input type="text" id="contactName" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" placeholder="How can we help?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-cyan" style="width:100%;justify-content:center;">
+                            Send Message <i class="fas fa-paper-plane" style="font-size:0.8rem;"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo">IEC</div>
+                    <p>Innovation & Entrepreneurship Cell at THDC Institute of Hydropower Engineering and Technology, Tehri. Fostering a culture of innovation and entrepreneurship among students.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="LinkedIn" onclick="event.preventDefault();alert('Official LinkedIn page coming soon.')"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram" onclick="event.preventDefault();alert('Official Instagram page coming soon.')"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter" onclick="event.preventDefault();alert('Official Twitter page coming soon.')"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#initiatives">Initiatives</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#news">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#spotlight">Spotlight</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#" onclick="event.preventDefault();openJoinModal()">Join IEC</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>THDC IHET, Tehri</li>
+                        <li>Uttarakhand, India</li>
+                        <li>iec@thdcihet.ac.in <span style="font-size:0.65rem;opacity:0.5;">(placeholder)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Innovation & Entrepreneurship Cell, THDC IHET. All rights reserved.</p>
+                <div class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+                    <span>Back to top</span>
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JOIN MODAL ==================== -->
+    <div class="modal-overlay" id="joinModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeJoinModal()" aria-label="Close modal"><i class="fas fa-times"></i></button>
+            <div id="joinFormContainer">
+                <h2>Join Innovation Cell</h2>
+                <p>Fill out the form below to become a member of IEC. We'll get back to you soon.</p>
+                <form class="join-form" id="joinForm" onsubmit="handleJoinSubmit(event)" novalidate>
+                    <div class="form-group" id="fg-name">
+                        <label for="joinName">Full Name *</label>
+                        <input type="text" id="joinName" placeholder="Your full name" required>
+                        <span class="error-text">Please enter your full name.</span>
+                    </div>
+                    <div class="form-group" id="fg-email">
+                        <label for="joinEmail">College Email *</label>
+                        <input type="email" id="joinEmail" placeholder="you@thdcihet.ac.in" required>
+                        <span class="error-text">Please enter a valid email address.</span>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" id="fg-mobile">
+                            <label for="joinMobile">Mobile Number *</label>
+                            <input type="tel" id="joinMobile" placeholder="10-digit mobile number" required>
+                            <span class="error-text">Enter a valid 10-digit mobile number.</span>
+                        </div>
+                        <div class="form-group" id="fg-dept">
+                            <label for="joinDept">Department *</label>
+                            <select id="joinDept" required>
+                                <option value="">Select department</option>
+                                <option value="CSE">Computer Science & Engineering</option>
+                                <option value="ECE">Electronics & Communication</option>
+                                <option value="EE">Electrical Engineering</option>
+                                <option value="ME">Mechanical Engineering</option>
+                                <option value="CE">Civil Engineering</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span class="error-text">Please select your department.</span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" id="fg-year">
+                            <label for="joinYear">Year of Study *</label>
+                            <select id="joinYear" required>
+                                <option value="">Select year</option>
+                                <option value="1">1st Year</option>
+                                <option value="2">2nd Year</option>
+                                <option value="3">3rd Year</option>
+                                <option value="4">4th Year</option>
+                            </select>
+                            <span class="error-text">Please select your year.</span>
+                        </div>
+                        <div class="form-group" id="fg-interest">
+                            <label for="joinInterest">Areas of Interest *</label>
+                            <input type="text" id="joinInterest" placeholder="e.g., AI, IoT, Entrepreneurship" required>
+                            <span class="error-text">Please enter your areas of interest.</span>
+                        </div>
+                    </div>
+                    <div class="form-group" id="fg-why">
+                        <label for="joinWhy">Why do you want to join IEC? *</label>
+                        <textarea id="joinWhy" placeholder="Tell us briefly..." required></textarea>
+                        <span class="error-text">Please tell us why you want to join.</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                        Submit Application <i class="fas fa-paper-plane" style="font-size:0.8rem;"></i>
+                    </button>
+                    <p style="font-size:0.7rem;color:var(--muted);text-align:center;margin-top:4px;">This is a prototype. Form data is not stored.</p>
+                </form>
+            </div>
+            <div class="success-msg" id="joinSuccess">
+                <i class="fas fa-check-circle"></i>
+                <h3>Application Received!</h3>
+                <p>Thank you for your interest in joining IEC. We'll be in touch soon.</p>
+                <button class="btn btn-primary" style="margin-top:20px;" onclick="closeJoinModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== LIGHTBOX ==================== -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox"><i class="fas fa-times"></i></button>
+        <img src="" alt="Gallery image enlarged" id="lightboxImg" onclick="event.stopPropagation()">
+    </div>
+
+    <script>
+        // ============================================================
+        // DATA ARRAYS — Replace with backend API data later
+        // ============================================================
+
+        // TODO: Replace with backend API endpoint
+        // Example: GET /api/events
+        const eventsData = [
+            {
+                id: 1,
+                title: "Startup Ideathon 2026",
+                date: "March 15, 2026",
+                category: "Ideathon",
+                status: "Upcoming",
+                description: "A 24-hour ideation sprint where students form teams and develop innovative solutions to real-world problems.",
+                image: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop"
+            },
+            {
+                id: 2,
+                title: "Entrepreneurship Workshop",
+                date: "February 28, 2026",
+                category: "Workshop",
+                status: "Upcoming",
+                description: "Learn the fundamentals of building a startup — from idea validation to business model canvas and pitching.",
+                image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop"
+            },
+            {
+                id: 3,
+                title: "Innovation Hackathon",
+                date: "April 10–11, 2026",
+                category: "Hackathon",
+                status: "Ongoing",
+                description: "A flagship 36-hour hackathon bringing together coders, designers, and innovators to build impactful prototypes.",
+                image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop"
+            },
+            {
+                id: 4,
+                title: "Startup Pitching Session",
+                date: "January 20, 2026",
+                category: "Pitch",
+                status: "Completed",
+                description: "Students pitched their startup ideas to a panel of faculty, industry experts, and investors.",
+                image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&h=400&fit=crop"
+            }
+        ];
+
+        // TODO: Replace with backend API endpoint
+        // Example: GET /api/news
+        const newsData = [
+            {
+                id: 1,
+                title: "IEC Announces Innovation Challenge 2026",
+                category: "Announcement",
+                date: "February 5, 2026",
+                description: "The Innovation & Entrepreneurship Cell is launching a college-wide innovation challenge for all students.",
+                image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop"
+            },
+            {
+                id: 2,
+                title: "Student Startup Wins Regional Competition",
+                category: "Achievement",
+                date: "January 28, 2026",
+                description: "Team HydroSense from THDC IHET secured first place at the Uttarakhand Innovation Summit.",
+                image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
+            },
+            {
+                id: 3,
+                title: "Registrations Open: National Hackathon",
+                category: "Competition",
+                date: "January 15, 2026",
+                description: "Students can now register for the Smart India Hackathon 2026 through the IEC portal.",
+                image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=400&fit=crop"
+            },
+            {
+                id: 4,
+                title: "From Classroom to Startup: A Student's Journey",
+                category: "Story",
+                date: "December 20, 2025",
+                description: "Read how one student turned a final-year project into a working startup with IEC's support.",
+                image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop"
+            }
+        ];
+
+        // TODO: Replace with backend API endpoint
+        // Example: GET /api/team
+        const teamData = [
+            {
+                name: "Dr. Rajesh Kumar",
+                role: "Faculty Coordinator",
+                bio: "Guiding IEC with academic expertise and industry connections.",
+                image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
+                linkedin: "#"
+            },
+            {
+                name: "Ananya Sharma",
+                role: "President",
+                bio: "Leading the vision and strategy for IEC's growth.",
+                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+                linkedin: "#"
+            },
+            {
+                name: "Rohit Verma",
+                role: "Vice President",
+                bio: "Managing operations and driving student engagement.",
+                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+                linkedin: "#"
+            },
+            {
+                name: "Priya Nautiyal",
+                role: "Technical Lead",
+                bio: "Overseeing technical projects and hackathon initiatives.",
+                image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
+                linkedin: "#"
+            },
+            {
+                name: "Amit Rawat",
+                role: "Event Coordinator",
+                bio: "Planning and executing all IEC events and workshops.",
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+                linkedin: "#"
+            }
+        ];
+
+        // TODO: Replace with backend API endpoint
+        // Example: GET /api/gallery
+        const galleryData = [
+            {
+                src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=800&fit=crop",
+                alt: "Workshop session on entrepreneurship"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=800&fit=crop",
+                alt: "Students at a hackathon"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=800&fit=crop",
+                alt: "Team collaboration session"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=800&fit=crop",
+                alt: "Innovation event at campus"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=800&fit=crop",
+                alt: "Brainstorming and ideation"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=800&fit=crop",
+                alt: "Student startup discussion"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=800&fit=crop",
+                alt: "Pitching session"
+            }
+        ];
+
+        // TODO: Replace with backend API endpoint
+        // Example: GET /api/statistics
+        // IMPORTANT: These are SAMPLE statistics for demonstration only.
+        const statisticsData = [
+            { label: "Student Innovators", value: 25, suffix: "+" },
+            { label: "Events Organized", value: 10, suffix: "+" },
+            { label: "Startup Ideas", value: 5, suffix: "+" },
+            { label: "Industry Collaborations", value: 3, suffix: "+" }
+        ];
+
+        // ============================================================
+        // RENDER FUNCTIONS
+        // ============================================================
+
+        function renderEvents(filter = "all") {
+            const grid = document.getElementById("eventGrid");
+            const filtered = filter === "all" ? eventsData : eventsData.filter(e => e.status === filter);
+            if (filtered.length === 0) {
+                grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--muted);padding:40px;">No events found for this filter.</p>';
+                return;
+            }
+            grid.innerHTML = filtered.map(ev => `
+                <div class="event-card reveal">
+                    <div class="event-img">
+                        <img src="${ev.image}" alt="${ev.title}" loading="lazy">
+                        <span class="event-status status-${ev.status.toLowerCase()}">${ev.status}</span>
+                    </div>
+                    <div class="event-body">
+                        <div class="event-meta">
+                            <span><i class="fas fa-calendar"></i>${ev.date}</span>
+                        </div>
+                        <span class="event-cat">${ev.category}</span>
+                        <h3>${ev.title}</h3>
+                        <p>${ev.description}</p>
+                        <button class="btn btn-dark-outline" style="padding:10px 20px;font-size:0.82rem;align-self:flex-start;" onclick="alert('Event details page for: ${ev.title.replace(/'/g, "\\'")} (prototype)')">View Details <i class="fas fa-arrow-right" style="font-size:0.7rem;"></i></button>
+                    </div>
+                </div>
+            `).join("");
+            // Re-observe new reveal elements
+            observeReveals();
+        }
+
+        function renderNews(filter = "all") {
+            const grid = document.getElementById("newsGrid");
+            const filtered = filter === "all" ? newsData : newsData.filter(n => n.category === filter);
+            if (filtered.length === 0) {
+                grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--muted);padding:40px;">No news found for this category.</p>';
+                return;
+            }
+            grid.innerHTML = filtered.map(n => `
+                <div class="news-card reveal">
+                    <div class="news-img">
+                        <img src="${n.image}" alt="${n.title}" loading="lazy">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-meta">
+                            <span class="news-cat">${n.category}</span>
+                            <span>${n.date}</span>
+                        </div>
+                        <h3>${n.title}</h3>
+                        <p>${n.description}</p>
+                        <button class="read-more" onclick="alert('Full article page for: ${n.title.replace(/'/g, "\\'")} (prototype)')">
+                            Read More <i class="fas fa-arrow-right" style="font-size:0.7rem;"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join("");
+            observeReveals();
+        }
+
+        function renderTeam() {
+            const grid = document.getElementById("teamGrid");
+            grid.innerHTML = teamData.map(m => `
+                <div class="team-card reveal">
+                    <div class="team-img">
+                        <img src="${m.image}" alt="${m.name} — ${m.role}" loading="lazy">
+                    </div>
+                    <div class="team-body">
+                        <h4>${m.name}</h4>
+                        <div class="team-role">${m.role}</div>
+                        <p class="team-bio">${m.bio}</p>
+                        <a href="${m.linkedin}" class="team-social" aria-label="LinkedIn" onclick="event.preventDefault();alert('LinkedIn profile placeholder for ${m.name}')">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            `).join("");
+            observeReveals();
+        }
+
+        function renderGallery() {
+            const grid = document.getElementById("galleryGrid");
+            grid.innerHTML = galleryData.map((g, i) => `
+                <div class="gallery-item reveal" onclick="openLightbox('${g.src}', '${g.alt.replace(/'/g, "\\'")}')">
+                    <img src="${g.src}" alt="${g.alt}" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+            `).join("");
+            observeReveals();
+        }
+
+        function renderStatistics() {
+            const grid = document.getElementById("statsGrid");
+            grid.innerHTML = statisticsData.map(s => `
+                <div class="stat-card reveal">
+                    <div class="stat-number"><span class="counter" data-target="${s.value}">0</span><span class="suffix">${s.suffix}</span></div>
+                    <div class="stat-label">${s.label}</div>
+                </div>
+            `).join("");
+            observeReveals();
+            // Animate counters when visible
+            setTimeout(initCounters, 100);
+        }
+
+        // ============================================================
+        // PLACEHOLDER API FUNCTIONS — For future backend integration
+        // ============================================================
+
+        // TODO: Replace with backend API endpoint.
+        // Example: GET /api/events
+        async function fetchEvents() {
+            // Simulate API call
+            return Promise.resolve(eventsData);
+        }
+
+        // TODO: Replace with backend API endpoint.
+        // Example: GET /api/news
+        async function fetchNews() {
+            return Promise.resolve(newsData);
+        }
+
+        // TODO: Replace with backend API endpoint.
+        // Example: GET /api/team
+        async function fetchTeam() {
+            return Promise.resolve(teamData);
+        }
+
+        // TODO: Replace with backend API endpoint.
+        // Example: POST /api/iec/join
+        // NOTE: This is a simulation. No data is actually stored.
+        async function submitJoinForm(formData) {
+            console.log("Join form data (simulated):", Object.fromEntries(formData));
+            // TODO: Replace with actual fetch call:
+            // const response = await fetch('/api/iec/join', { method: 'POST', body: JSON.stringify(Object.fromEntries(formData)) });
+            // return response.json();
+            return new Promise(resolve => setTimeout(() => resolve({ success: true }), 800));
+        }
+
+        // ============================================================
+        // INITIALIZATION
+        // ============================================================
+
+        document.addEventListener("DOMContentLoaded", () => {
+            renderEvents();
+            renderNews();
+            renderTeam();
+            renderGallery();
+            renderStatistics();
+            initNavigation();
+            initScrollReveal();
+            initCounters();
+            initFilterButtons();
+            initScrollSpy();
+        });
+
+        // ============================================================
+        // NAVIGATION
+        // ============================================================
+
+        function initNavigation() {
+            const navbar = document.getElementById("navbar");
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("navLinks");
+
+            // Scroll effect
+            window.addEventListener("scroll", () => {
+                navbar.classList.toggle("scrolled", window.scrollY > 60);
+            });
+
+            // Hamburger toggle
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("active");
+                navLinks.classList.toggle("open");
+            });
+
+            // Close mobile nav on link click
+            navLinks.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    hamburger.classList.remove("active");
+                    navLinks.classList.remove("open");
+                });
+            });
+
+            // Smooth scrolling for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    const target = document.querySelector(this.getAttribute("href"));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                });
+            });
+        }
+
+        // Active nav tracking
+        function initScrollSpy() {
+            const sections = document.querySelectorAll("section[id]");
+            const navAnchors = document.querySelectorAll(".nav-links a");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navAnchors.forEach(a => a.classList.remove("active"));
+                        const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+                        if (active) active.classList.add("active");
+                    }
+                });
+            }, { rootMargin: "-40% 0px -55% 0px" });
+
+            sections.forEach(s => observer.observe(s));
+        }
+
+        // ============================================================
+        // SCROLL REVEAL
+        // ============================================================
+
+        let revealObserver;
+
+        function initScrollReveal() {
+            revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: "0px 0px -60px 0px" });
+
+            observeReveals();
+        }
+
+        function observeReveals() {
+            document.querySelectorAll(".reveal:not(.visible)").forEach(el => {
+                if (revealObserver) revealObserver.observe(el);
+            });
+        }
+
+        // ============================================================
+        // ANIMATED COUNTERS
+        // ============================================================
+
+        function initCounters() {
+            const counters = document.querySelectorAll(".counter");
+            if (!counters.length) return;
+
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(c => counterObserver.observe(c));
+        }
+
+        function animateCounter(el) {
+            const target = parseInt(el.getAttribute("data-target"));
+            const duration = 1800;
+            const start = performance.now();
+
+            function update(now) {
+                const progress = Math.min((now - start) / duration, 1);
+                // Ease out cubic
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.round(eased * target);
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    el.textContent = target;
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // ============================================================
+        // FILTERS
+        // ============================================================
+
+        function initFilterButtons() {
+            // Events
+            const eventFilters = document.getElementById("eventFilters");
+            eventFilters.addEventListener("click", (e) => {
+                const btn = e.target.closest(".filter-btn");
+                if (!btn) return;
+                eventFilters.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                renderEvents(btn.dataset.filter);
+            });
+
+            // News
+            const newsFilters = document.getElementById("newsFilters");
+            newsFilters.addEventListener("click", (e) => {
+                const btn = e.target.closest(".filter-btn");
+                if (!btn) return;
+                newsFilters.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                renderNews(btn.dataset.filter);
+            });
+        }
+
+        // ============================================================
+        // GALLERY LIGHTBOX
+        // ============================================================
+
+        function openLightbox(src, alt) {
+            const lightbox = document.getElementById("lightbox");
+            const img = document.getElementById("lightboxImg");
+            img.src = src;
+            img.alt = alt || "Gallery image";
+            lightbox.classList.add("active");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById("lightbox");
+            lightbox.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+
+        // Close lightbox on Escape
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                closeLightbox();
+                closeJoinModal();
+            }
+        });
+
+        // ============================================================
+        // JOIN MODAL
+        // ============================================================
+
+        function openJoinModal() {
+            const modal = document.getElementById("joinModal");
+            modal.classList.add("active");
+            document.body.style.overflow = "hidden";
+            // Reset form state
+            document.getElementById("joinFormContainer").style.display = "block";
+            document.getElementById("joinSuccess").style.display = "none";
+            document.getElementById("joinForm").reset();
+            clearAllErrors();
+        }
+
+        function closeJoinModal() {
+            const modal = document.getElementById("joinModal");
+            modal.classList.remove("active");
+            document.body.style.overflow = "";
+        }
+
+        // Close modal on overlay click
+        document.getElementById("joinModal").addEventListener("click", function (e) {
+            if (e.target === this) closeJoinModal();
+        });
+
+        function clearAllErrors() {
+            document.querySelectorAll(".join-form .form-group").forEach(g => g.classList.remove("has-error"));
+        }
+
+        function setError(id, show) {
+            const group = document.getElementById(id);
+            if (group) group.classList.toggle("has-error", show);
+        }
+
+        // ============================================================
+        // FORM VALIDATION
+        // ============================================================
+
+        async function handleJoinSubmit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById("joinName").value.trim();
+            const email = document.getElementById("joinEmail").value.trim();
+            const mobile = document.getElementById("joinMobile").value.trim();
+            const dept = document.getElementById("joinDept").value;
+            const year = document.getElementById("joinYear").value;
+            const interest = document.getElementById("joinInterest").value.trim();
+            const why = document.getElementById("joinWhy").value.trim();
+
+            let valid = true;
+
+            // Name
+            setError("fg-name", name.length < 2);
+            if (name.length < 2) valid = false;
+
+            // Email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            setError("fg-email", !emailRegex.test(email));
+            if (!emailRegex.test(email)) valid = false;
+
+            // Mobile — 10 digits
+            const mobileRegex = /^[0-9]{10}$/;
+            setError("fg-mobile", !mobileRegex.test(mobile));
+            if (!mobileRegex.test(mobile)) valid = false;
+
+            // Department
+            setError("fg-dept", !dept);
+            if (!dept) valid = false;
+
+            // Year
+            setError("fg-year", !year);
+            if (!year) valid = false;
+
+            // Interest
+            setError("fg-interest", interest.length < 2);
+            if (interest.length < 2) valid = false;
+
+            // Why
+            setError("fg-why", why.length < 10);
+            if (why.length < 10) valid = false;
+
+            if (!valid) return;
+
+            // Simulate submission
+            const formData = new FormData();
+            formData.append("fullName", name);
+            formData.append("email", email);
+            formData.append("mobile", mobile);
+            formData.append("department", dept);
+            formData.append("year", year);
+            formData.append("interests", interest);
+            formData.append("whyJoin", why);
+
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            submitBtn.disabled = true;
+
+            try {
+                // TODO: Replace with actual backend API endpoint.
+                // Example: POST /api/iec/join
+                await submitJoinForm(formData);
+
+                // Show success
+                document.getElementById("joinFormContainer").style.display = "none";
+                document.getElementById("joinSuccess").style.display = "block";
+            } catch (err) {
+                alert("Something went wrong. Please try again.");
+            } finally {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
+        }
+
+        // ============================================================
+        // CONTACT FORM (simple simulation)
+        // ============================================================
+
+        function handleContactForm(e) {
+            e.preventDefault();
+            // TODO: Replace with backend API endpoint.
+            // Example: POST /api/contact
+            alert("Thank you for your message! This is a prototype — no message was actually sent. In production, this would connect to a backend API.");
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
